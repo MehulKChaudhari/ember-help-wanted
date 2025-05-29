@@ -13,7 +13,10 @@ module.exports = function (defaults) {
         DEPRECATE_STORE_EXTENDS_EMBER_OBJECT: false,
       },
     },
-    // Add options here
+    'ember-scoped-css': {
+      layerName: false,
+      additionalRoots: ['templates/'],
+    },
   });
 
   return app.toTree();
