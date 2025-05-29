@@ -16,7 +16,7 @@ module.exports = function (defaults) {
     'ember-scoped-css': {
       layerName: false,
       additionalRoots: ['templates/'],
-    }
+    },
   });
 
   return app.toTree();

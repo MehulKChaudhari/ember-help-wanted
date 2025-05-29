@@ -3,10 +3,7 @@
   <FilterMenu />
 
   <form {{on "submit" this.filterIssues}}>
-    <label
-      for="search-input-issues"
-      class="search-label"
-    >
+    <label for="search-input-issues" class="search-label">
       Keyword
     </label>
 
@@ -29,7 +26,10 @@
     {{#if this.label}}
       <div class="label-filter-container">
         <p>
-          In addition, look for issues with the label <span class="label-filter">{{remove-emoji-shortcode this.label}}</span>.
+          In addition, look for issues with the label
+          <span class="label-filter">{{remove-emoji-shortcode
+              this.label
+            }}</span>.
         </p>
 
         <EsButton
@@ -47,7 +47,8 @@
   </form>
 
   <p class="text-sm num-results-found">
-    {{@model.length}} issues displayed
+    {{@model.length}}
+    issues displayed
   </p>
 </section>
 
@@ -59,10 +60,7 @@
   <div class="row">
     <ul class="list-unstyled layout">
       {{#each this.githubIssuesSorted as |githubIssue|}}
-        <EsCard
-          data-test-github-issue={{githubIssue.number}}
-          class="card"
-        >
+        <EsCard data-test-github-issue={{githubIssue.number}} class="card">
           <header>
             <h3 class="text-lg">
               <a
@@ -76,10 +74,7 @@
             </h3>
 
             <div class="github-issue-number-container">
-              <p
-                data-test-field="Issue Number"
-                class="github-issue-number"
-              >
+              <p data-test-field="Issue Number" class="github-issue-number">
                 #{{githubIssue.number}}
               </p>
             </div>
