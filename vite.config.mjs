@@ -31,14 +31,16 @@ export default defineConfig({
           ? 'http://localhost:3000'
           : 'https://ember-help-wanted-server.herokuapp.com',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/github-repositories/, '/github-repositories'),
+        rewrite: (path) =>
+          path.replace(/^\/github-repositories/, '/github-repositories'),
       },
       '/api/pull-requests': {
         target: process.env.LOCAL_API
           ? 'http://localhost:3000'
           : 'https://ember-help-wanted-server.herokuapp.com',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/pull-requests/, '/api/pull-requests'),
+        rewrite: (path) =>
+          path.replace(/^\/api\/pull-requests/, '/api/pull-requests'),
       },
     },
   },
