@@ -2,6 +2,7 @@ const {
   babelCompatSupport,
   templateCompatSupport,
 } = require('@embroider/compat/babel');
+const scopedCSS = require("ember-scoped-css/build");
 
 module.exports = {
   plugins: [
@@ -14,7 +15,7 @@ module.exports = {
           'ember-cli-htmlbars-inline-precompile',
           'htmlbars-inline-precompile',
         ],
-        transforms: [...templateCompatSupport()],
+        transforms: [...templateCompatSupport(), scopedCSS.templatePlugin({})],
       },
     ],
     [

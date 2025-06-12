@@ -20,10 +20,6 @@ module.exports = async function(defaults) {
         DEPRECATE_STORE_EXTENDS_EMBER_OBJECT: false,
       },
     },
-    'ember-scoped-css': {
-      layerName: false,
-      additionalRoots: ['templates/'],
-    },
   });
 
   return compatBuild(app, buildOnce);
