@@ -75,4 +75,10 @@ module('Acceptance | index', function (hooks) {
       .dom('[data-test-github-issue]')
       .exists({ count: 9 }, 'The user sees 9 GitHub issues.');
   });
+
+  test('homepage snapshot', async function () {
+    await visit('/');
+    await percySnapshot('Homepage');
+  });
+
 });
